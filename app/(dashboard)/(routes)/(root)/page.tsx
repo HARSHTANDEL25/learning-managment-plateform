@@ -9,7 +9,7 @@ export default async function Dashboard() {
   const { userId } = auth();
 
   if (!userId) {
-      return redirect("/");
+      return redirect("/sign-up");
   }
 
   const { completedCourses, coursesInProgress } = await getDashboardCourses(
