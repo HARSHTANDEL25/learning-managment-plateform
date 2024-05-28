@@ -4,14 +4,14 @@ The Learning Management Platform (LMP) is a comprehensive solution for online ed
 
 
 Key Features:
-Browse & Filter Courses
+Browse & Filter Courses 
 Purchase Courses using Stripe
 Progress Calculation of each Course
 Student Dashboard
 Course sell analytics Page
 Teacher mode
-Create new Courses
-Create new Chapters
+Create new Courses, Edit the courses and delete the courses 
+creating, editing, and deleting chapters within courses with ease
 Mark Chapters as Completed or Uncompleted with real-time notification
 Easily reorder chapter position with drag n’ drop
 Upload thumbnails, attachments and videos using UploadThing
