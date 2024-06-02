@@ -72,6 +72,8 @@ model Chapter {
   course   Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
 
   userProgress UserProgress[]
+  
+  
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -129,3 +131,4 @@ model StripeCustomer {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
