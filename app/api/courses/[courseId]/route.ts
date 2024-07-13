@@ -3,7 +3,7 @@ import { auth } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 
 import Mux from "@mux/mux-node";
-import { isTeacher } from "@/lib/teacher";
+// import { isTeacher } from "@/lib/teacher";
 
 const { Video } = new Mux(
     process.env.MUX_TOKEN_ID!,
@@ -32,7 +32,7 @@ export async function PATCH(
         /* 
 			Check if there's a logged in user (authentication)
 		*/
-        if (!userId || !isTeacher(userId)) {
+        if (!userId ) {
             return new NextResponse("Unauthorized", { status: 401 });
         }
 
@@ -67,7 +67,7 @@ export async function DELETE(
         /* 
 			Check if there's a logged in user (authentication)
 		*/
-        if (!userId || !isTeacher(userId)) {
+        if (!userId ) {
             return new NextResponse("Unauthorized", { status: 401 });
         }
 
