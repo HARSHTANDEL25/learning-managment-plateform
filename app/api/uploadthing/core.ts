@@ -1,8 +1,7 @@
-import { isTeacher } from "@/lib/teacher";
+// import { isTeacher } from "@/lib/teacher";
 import { auth } from "@clerk/nextjs/server";
 import toast from "react-hot-toast";
 import { createUploadthing, type FileRouter } from "uploadthing/next";
-import { UploadThingError } from "uploadthing/server";
  
 const f = createUploadthing();
  
@@ -10,9 +9,8 @@ const f = createUploadthing();
 const handleAuth=()=>{
     const {userId}=auth();
 
-    const isAuthorized=isTeacher(userId);
 
-    if(!userId || !isAuthorized) throw new Error("unauthorized")
+    if(!userId ) throw new Error("unauthorized")
         return {userId};
 }
 // FileRouter for your app, can contain multiple FileRoutes
